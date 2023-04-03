@@ -3,7 +3,7 @@ name: Trading TwitterBot
 on:
   schedule:
     # - cron: '50 6,9,12,14 * * *'              # schedule task
-    - cron: '12 15 * * *'              # schedule task
+    - cron: '25 15 * * *'              # schedule task
 
 jobs:
   build:

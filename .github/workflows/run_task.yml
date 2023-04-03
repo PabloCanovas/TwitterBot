@@ -3,7 +3,7 @@ name: Trading TwitterBot
 on:
   schedule:
     # - cron: '50 6,9,12,14 * * *'              # schedule task
-    - cron: '30 17 * * *'              # schedule task
+    - cron: '20 18 * * *'              # schedule task
 
 jobs:
   build:
@@ -33,7 +33,7 @@ jobs:
 
       - name: commit files
         run: |
-          git config --local user.email "pablo.canovastourne@gmail.com"
+          git config --local user.email "pablocanovastourne@gmail.com"
           git config --local user.name "PabloCanovas"
           git add -A
           git commit -m "update data" -a

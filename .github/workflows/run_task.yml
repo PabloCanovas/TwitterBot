@@ -2,7 +2,8 @@ name: Trading TwitterBot
 
 on:
   schedule:
-    - cron: '50 6,9,12,14 * * *'              # schedule task
+    # - cron: '50 6,9,12,14 * * *'              # schedule task
+    - cron: '09 15 * * *'              # schedule task
 
 jobs:
   build:
@@ -41,6 +42,6 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main  
+          branch: master  
           
       

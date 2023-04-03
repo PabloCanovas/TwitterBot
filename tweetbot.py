@@ -11,8 +11,9 @@ def main():
                            access_token = os.environ.get('ACCESS_TOKEN'), 
                            access_token_secret = os.environ.get('ACCESS_TOKEN_SECRET'))
 
-    count = get_tweet_count(counter_file)
-    tweet = get_tweet(tweets_file, count)
+    counter = get_tweet_counter(counter_file)
+    update_tweet_counter(counter, counter_file)
+    tweet = get_tweet(tweets_file, counter)
     print(tweet)
 
     response = client.create_tweet(text=tweet)

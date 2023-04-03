@@ -1,17 +1,18 @@
-def get_tweet_count(file):
+def get_tweet_counter(file):
     with open(file, "r") as f:
-        count = f.read()
-        count = int(count)
+        counter = f.read()
+        counter = int(counter)
+    return counter
 
+def update_tweet_counter(counter, file):
     with open(file, "w") as f:
-        f.write(str(count+1))
+        f.write(str(counter+1))
+    
 
-    return count
-
-def get_tweet(file, count):
+def get_tweet(file, counter):
     with open(file, "r") as f:
         tweets = f.readlines()
-    return tweets[count]
+    return tweets[counter]
 
 def randomize_write(tweets, file):
     import random
